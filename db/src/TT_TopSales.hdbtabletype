@@ -1,0 +1,7 @@
+TYPE "APPJOAN1_DB_TT_TopSales" AS TABLE (
+  "ID" INTEGER,
+  "mainboard" NVARCHAR(100),
+  "procesador" NVARCHAR(100),
+  "discoduro" INTEGER,
+  "fuente" NVARCHAR(100)
+)

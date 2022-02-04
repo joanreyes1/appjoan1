@@ -1,0 +1,12 @@
+PROCEDURE "APPJOAN1_DB_SP_TopSales" (IN discoduro INTEGER, OUT result "APPJOAN1_DB_TT_TopSales")
+  LANGUAGE SQLSCRIPT
+  SQL SECURITY INVOKER
+  READS SQL DATA
+  AS
+BEGIN
+  result = select ID, MAINBOARD as "mainboard", PROCESADOR as "procesador", DISCODURO as "discoduro", FUENTE as "fuente" 
+             from "APPJOAN1_DB_SALES"
+             where PROCESADOR >= :procesador
+             order by PROCESADOR desc
+             ;
+END
